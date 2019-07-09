@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新东方前途出国留学_新东方留学_英美留学_澳新留学_欧亚留学_始于1996</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery1.js"></script>
+    <script>
+          $(function(){
+            //锚点跳转滑动效果
+            $('a[href*=#],area[href*=#]').click(function() {
+
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top - adsor.data.el.clientHeight;
+                        $('html,body').animate({
+                                    scrollTop: targetOffset
+                                },
+                                500);
+                        return false;
+                    }
+                }
+            });
+        })
+  </script>
+</head>
+<body>
+
+<!--头部开始-->
+<header class="index-header">
+    <div>
+        <div class="container">
+            <nav class="index-nav overflow">
+                <img src="images/logo.png" class="float_left"  />
+            </nav>
+            <section class="index-header-content">
+                <div class="index-header-c-left float_left">
+                    <div class="index-from-warp">
+                        <label>姓名:</label>
+                        <div>
+                            <input type="text" />
+                        </div>
+                        <label>手机
+                            :</label>
+                        <div>
+                            <input type="text" />
+                        </div>
+                        <div class="index-box-button radius-lg button-reverse text-center width-fluid" style="margin-top:35px;"><span><img src="images/icon-people.png"></span>免费留学顾问回访</div>
+                    </div>
+                </div>
+                <div class="index-header-c-right">
+                    <h1><span>加拿大留学</span>又火起来了</h1>
+                    <h1 class="text-right">枫叶国哪些门槛特别低？</h1>
+                </div>
+            </section>
+        </div>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--nav开始-->
+<div class="nav tabBar">
+    <div class="container nav-children"  id="nav-tab-adsorbent">
+         <div class="nav-main hd">
+              <ul>
+            	  <a href="#mk01" class="evt_link1"><li class="nav-main-body float_left on"><img src="images/icon-nav1.png">美国留学</li></a>
+            	  <a href="#mk02" class="evt_link1"><li class="nav-main-body float_left"><img src="images/icon-nav2.png">英国留学</li></a>
+            	  <a href="#mk03" class="evt_link1"><li class="nav-main-body float_left"><img src="images/icon-nav3.png">加拿大留学</li></a>
+            	  <a href="#mk04" class="evt_link1"><li class="nav-main-body float_left"><img src="images/icon-nav4.png">澳洲留学</li></a>
+            	  <a href="#mk05" class="evt_link1"><li class="nav-main-body float_left"><img src="images/icon-nav5.png">欧洲留学</li></a>
+            	  <a href="#mk06" class="evt_link1"><li class="nav-main-body float_left"><img src="images/icon-nav6.png">亚洲留学</li></a>
+              </ul>
+	     </div>
+    </div>
+</div>
+<!--nav结束-->
+
+<!--美国留学1开始-->
+<div class="mk" id="mk01">
+<div style="width: 100%;height: 500px;background: #333;"></div>
+</div>
+<!--美国留学1结束-->
+
+
+
+<div class="mk" id="mk02">
+<div style="width: 100%;height: 500px;background: #995566;"></div>
+</div>
+
+
+
+
+
+<footer class="index-footer">
+    <p>新东方教育科技集团有限公司</p>
+    <p>经营许可证编号：京ICP备05067667 © 版权所有:新东方前途出国咨询有限公司</p>
+    <p>© 2018 New Oriental Vision Overseas Consulting Co. Ltd</p>
+</footer>
+
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/index.js"></script>
+<!--下拉效果-->
+<script>
+    //select 选择类
+    function Select(obj){
+
+        obj = obj || {};
+
+        if(!obj.el){
+            console.error('not have element select , this code  must have el attr');
+            return null;
+        }
+
+        this.el = obj.el;
+        // 开始分析结构
+        this.input = $(obj.el).children('input')[0];  //获取input标记
+        this.icon = $(obj.el).children('aside')[0];  //获取标记
+        this.warp = $(obj.el).children('ul.select-options')[0];  //获取外层
+        this.list = $(obj.el).children('ul.select-options').children('li.select-option'); //获取选择列表
+        this.value = $(obj.el).children('span')[0];
+        //设置默认值
+        this.index = obj.index || 0;    //默认选中
+        this.select = obj.select || false;   //是否开始打开选择列表
+        this.isother = obj.isother || false;  //点击其他 地方是否隐藏
+        var that = this;
+
+        (function (parent) {
+            $(parent.list).click(function(){
+
+                parent.selectValue($(this).index());
+
+            });
+
+            $(parent.el).click(function(){
+                parent.toggle.call(parent);
+            });
+
+            parent.bindOther = function(){
+                parent.other();
+            }
+
+        })(that);
+
+
+
+        this.init = false;
+
+        Select.prototype.selectValue.call(this,this.index);
+
+        this.init = true;  //装载完毕
+
+    }
+
+
+
+    // 选择 选项的值  data-value  如果 data-value 为空 选择 innerHtml
+    Select.prototype.selectValue = function(index){
+
+        if(this.index != index || !this.init){
+            this.index = index;
+            //设置value值
+            this.input.value = $(this.list).eq(index).data('value') || $(this.list).eq(index).html()
+
+            this.value.innerHTML = this.input.value;
+        }
+
+        this.isnext = true;
+
+        this.hide();
+
+    };
+
+    //隐藏
+    Select.prototype.hide = function(){
+
+        if(this.select || !this.init){
+            $(this.icon).removeClass('select-icon-select');
+            var that = this;
+            this.isnext = false;
+
+            if(this.isother){
+                removeEvent(document,'click',this.bindOther)
+            }
+
+
+            $(this.warp).animate({
+                top:'100px',
+                opacity:'0'
+            },500,function(){
+                $(this).hide();
+                that.select = false;
+                that.isnext =true;
+            });
+        }
+
+    };
+
+    Select.prototype.toggle = function(){
+
+        if(this.select&&this.isnext){
+            this.hide();
+        }else if(this.isnext){
+            this.show()
+        }
+
+    };
+
+    //隐藏
+    Select.prototype.show = function(){
+
+        if(!this.select || !this.init){
+            var that = this;
+            $(this.icon).addClass('select-icon-select');
+            that.isnext =false;
+            if(this.isother){
+
+                addEvent(document,'click',this.bindOther)
+            }
+            $(this.warp).show();
+            $(this.warp).animate({
+                top:'50px',
+                opacity:'1'
+            },500,function(){
+                that.select = true;
+                that.isnext =true;
+            });
+
+        }
+    };
+
+    Select.prototype.other = function(e){
+
+        var eve = e || event;
+
+        if(eve){
+            var target = eve.target;
+            var maxParent = $(this.el)[0];
+            var i = 0;
+            while (i<3){
+
+                if(target == maxParent || target == this.warp){
+                    return;
+                }else{
+                    target = target.parentNode;
+                }
+                i++;
+
+            }
+
+            this.hide();
+
+        }else{
+            this.hide();
+        }
+
+    };
+
+    new Select({
+        el:'.select',
+        isother:true
+    });
+
+    function addEvent(el,type,fun) {
+
+        if(window.addEventListener){
+            el.addEventListener(type,fun);
+        }else{
+            el.attachEvent('on'+type,fun);
+        }
+    }
+
+    function removeEvent(el,type,fun) {
+        if(window.removeEventListener){
+            el.removeEventListener(type,fun)
+        }else{
+            el.detachEvent('on'+type,fun);
+        }
+    }
+
+    var conf = {
+        i:0
+    };
+
+
+     function project_setChange(i){
+
+         if(i != conf.index){
+             conf.index = i;
+             $('.index-school-model-right-model').show();
+             $('.index-school-model-right-model').next().hide();
+             $('.index-school-model-right-model').eq(i).hide().next().show();
+         }
+
+    }
+
+  </script>
+
+  <script type="text/javascript">
+        window._pt_lt = new Date().getTime();
+        window._pt_sp_2 = [];
+        _pt_sp_2.push('setAccount,1554e7cc');
+        var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        (function() {
+            var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+            atag.src = _protocol + 'js.ptengine.cn/1554e7cc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(atag, s);
+        })();
+ </script>
+</body>
+</html>
