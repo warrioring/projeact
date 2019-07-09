@@ -222,8 +222,7 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
     background: url("../images/title-bg2.png") center top no-repeat;
 }
 .index-title{
-    color: #b9232f;
-    font-size: 2.4rem;
+    font-size: 34px;
     height: 25px;
     line-height: 25px;
 	margin-bottom: 20px;
@@ -779,6 +778,7 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
     margin: 0 auto;
     transition: 1s;
 	z-index: 10;
+	background: #1f2329;
 }
 
 .nav-container{
@@ -821,7 +821,9 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
 	display: block;
 }
 .nav-main-body img{
-	margin-top: 10px;
+	position: relative;
+	top: 10px;
+	left: -10px;
 }
 .tabBar .hd li.on{
 	width: 16.4%;
