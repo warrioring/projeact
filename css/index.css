@@ -87,7 +87,7 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
     position: relative;
 }
 .seletion{
-	widows: 100%;
+	width: 100%;
 }
 .container:before,.container:after{
     display: table;
@@ -376,9 +376,12 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
 }
 .font-tag{
 	font-size: 24px;
-	color: #fff;
+	color: #fff;	
 }
-
+.difference2-whitebg{
+	background: url(../images/body1-whitebg.png);
+	background-size: 90%;
+}
 
 
 
