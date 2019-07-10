@@ -86,6 +86,9 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
     width: 1000px;
     position: relative;
 }
+.seletion{
+	widows: 100%;
+}
 .container:before,.container:after{
     display: table;
     content: '';
@@ -366,8 +369,15 @@ a,button,input{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-
 .difference1-right span{
 	color: #e33310;
 }
-
-
+.difference2{
+	width: 476px;
+	background: #fdfae3;
+	margin-left: 10px;
+}
+.font-tag{
+	font-size: 24px;
+	color: #fff;
+}
 
 
 
